@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Main Image -->
+        <ImageView
+            android:id="@+id/imageViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logotype"
+            android:padding="10dp" />
+
+        <!-- File Name -->
+        <TextView
+            android:id="@+id/textFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample File Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <!-- File Size -->
+        <TextView
+            android:id="@+id/textFileSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="File size : 1.5 MB"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="14sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Action Buttons (Download and Delete) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="8dp">
+
+            <!-- Download Action -->
+            <ImageView
+                android:id="@+id/buttonDownload"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_download"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Delete Action -->
+            <ImageView
+                android:id="@+id/buttonDelete"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/delete"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
